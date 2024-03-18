@@ -72,7 +72,7 @@ class Hotel{
 
      public function countChambresReserves(){
          $nombre = 0;
-        
+         echo "<br>";
         foreach($this->chambres as $chambre){
          
             if ($chambre->getEstDispo()==true){
@@ -85,9 +85,15 @@ class Hotel{
 
 
     public function countChambresDispo(){
-      
+        echo "<br>";
         return $this->countChambres() - $this->countChambresReserves();
 
+    }
+
+    public function getInfos(){
+        echo $this->nom."<br>".$this->adresse."<br> Nombre de chambres : ".$this->countChambres().
+        "<br> Nombre de chambres réservées : ".$this->countChambresReserves().
+        "<br> Nombre de chambres dispo : ".$this->countChambresDispo();
     }
 
 

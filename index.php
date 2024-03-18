@@ -16,3 +16,4 @@ echo $hotel1->countChambres();
 echo $hotel1->countChambresReserves(); 
 
 echo $hotel1->countChambresDispo();
+echo $hotel1->getInfos();
