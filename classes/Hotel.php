@@ -84,7 +84,11 @@ class Hotel{
 
 
 
-    // public function countChambresDispo()
+    public function countChambresDispo(){
+      
+        return $this->countChambres() - $this->countChambresReserves();
+
+    }
 
 
 }
