@@ -13,4 +13,4 @@ $chambre2 = new Chambre(2,1,110,false,true,$hotel1);
 
 echo $hotel1->countChambres();
 
-echo $hotel1->countChambresReserves();
+echo $hotel1->countChambresReserves(); 
