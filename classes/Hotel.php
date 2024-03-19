@@ -61,13 +61,13 @@ class Hotel{
 
     public function getReservation()
     {
-        return $this->reservation;
+        return $this->reservations;
     }
 
     
-    public function setReservation($reservation)
+    public function setReservation($reservations)
     {
-        $this->reservation = $reservation;
+        $this->reservations = $reservations;
 
         return $this;
     }
@@ -129,10 +129,11 @@ class Hotel{
     public function listeChambres(){
         echo "<br> Statuts des chambres de  ".$this->getNom()."<br> ";
         "<br> chambre       Prix        wifi        Etat    <br> ";
+        
         foreach($this->chambres as $chambre){
             $wifi = $chambre->getWifi() ? "📶" : "";
             $dispo = $chambre->getEstDispo() ? "DISPONIBLE" : "RESERVEE";
-            echo "Chambre ".$chambre->getNumeroChambre()."      ".$chambre->getPrix()."€      ".$wifi."     ".$dispo."<br>";
+            echo "Chambre ".$chambre->getNumeroChambre()."      ".$chambre->getPrix()."€      ".$wifi."    ".$dispo."<br>";
 
         }
     }
@@ -144,11 +145,11 @@ class Hotel{
 
     public function reservationsHotel(){
         echo "<br> Réservation de l'hotel   ".$this->getNom()."<br> ";
-
+       
         foreach($this->reservations as $reservation){
-            echo $reservation->client->getNom()." ".$reservation->client$client->getPrenom()." - Chambre ".$chambre->getNumeroChambre().$reservation->getInfos();
-
-
+            
+            echo " ".$reservation->getClient()->getNom()." ".
+            $reservation->getClient()->getPrenom()." ".$reservation->getInfos()."<br>";
         }
     
     }

@@ -127,7 +127,9 @@ class Chambre {
 
 
    
-
+    public function __toString(){
+        echo $this->getNumeroChambre();
+    }
    
 
 }

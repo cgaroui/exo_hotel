@@ -34,10 +34,12 @@ class Reservation{
         return $this;
     }
 
+
     public function getDateFin()
     {
         return $this->dateFin;
     }
+
 
     public function setDateFin($dateFin)
     {
@@ -45,11 +47,15 @@ class Reservation{
 
         return $this;
     }
+
+
      
     public function getClient()
     {
         return $this->client;
     }
+
+
 
     public function setClient($client)
     {
@@ -59,6 +65,7 @@ class Reservation{
     }
 
     
+
     public function getChambre()
     {
         return $this->chambre;
@@ -73,11 +80,6 @@ class Reservation{
     }
 
 
-    /*public function afficherReservation(){
-
-        
-        
-    }*/
 
     public function __toString()
     {
@@ -85,7 +87,11 @@ class Reservation{
     }
 
  
+    public function getInfos(){
 
+        echo "chambre ".$this->getChambre()->getNumeroChambre().
+        " - du ".$this->getDateDebut()->format("d/m/Y")." au ".$this->getDateFin()->format("d/m/Y");
+    }
     
 
    

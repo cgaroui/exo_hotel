@@ -12,8 +12,8 @@ $chambre2 = new Chambre(2,1,110,true ,true,$hotel1);
 
 
 
-$reservation1 = new Reservation("11-03-2021","15-03-2021",$client1, $chambre1);
-
+$reservation1 = new Reservation("01-01-2021","01-03-2021",$client1, $chambre1);
+$reservation2 = new Reservation ("11-03-2021", "11-03-2022", $client1, $chambre2);
 
 echo $hotel1->countChambres();
 
