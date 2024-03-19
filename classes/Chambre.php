@@ -117,10 +117,17 @@ class Chambre {
         return $this;
     }
 
+    public function addReservation(Reservation $reservation){
+        $this->reservations[] = $reservation;
+    }
+
     public function addChambre(Reservation $chambre){
         return $this->reservations[] = $chambre;
     }
 
 
    
+
+   
+
 }

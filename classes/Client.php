@@ -53,7 +53,19 @@ class Client{
         return $this;
     }
 
+    public function addReservation(Reservation $reservation){
+        $this->reservations[] = $reservation;
+    }
 
+
+    public function reservationsHotel(){
+
+        echo $this->getNom." ".$this->getPrenom."- Chambre ".$this->getReservations;
+
+
+    }
+
+  
 
     public function __toString()
     {
