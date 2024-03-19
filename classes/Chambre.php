@@ -1,6 +1,7 @@
 <?php
 
 
+
 class Chambre {
     private int $numeroChambre;
     private int $nbLits;
